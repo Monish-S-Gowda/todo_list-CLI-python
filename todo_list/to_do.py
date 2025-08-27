@@ -1,6 +1,6 @@
 from rich.console import Console
 from rich.align import Align
-
+from rich.prompt import Confirm
 console = Console()
 from rich import print
 import time
@@ -37,7 +37,16 @@ def main():
             history()
             exit(a)
         elif a == 4:
-            tick()
+            while True:
+                tick()
+                console.clear()
+                history()
+                i = Confirm.ask("want to exit : ")
+                if i:
+                    console.clear()
+                    break
+                else:
+                    pass
             exit(a)
         elif a == 5:
             clear()

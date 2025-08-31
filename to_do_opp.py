@@ -140,3 +140,14 @@ def clear():
         print("[green]now your list is empty[/green]")
     else:
         print("[green]not cleared[/green]")
+
+def showmain():
+    a = read_storage()
+    b = read_storage("sub")
+    c =b+a
+
+    for i in c:
+        if i in b:
+            print(f"[red]{c.index(i)}[/red].{i} ☑️")
+        else:
+            print(f"[red]{c.index(i)}[/red].{i}")

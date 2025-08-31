@@ -4,7 +4,7 @@ from rich.prompt import Confirm
 console = Console()
 from rich import print
 import time
-from to_do_opp import read, menu, add, remove, history, tick, clear
+from to_do_opp import read, menu, add, remove, history, tick, clear,showmain
 
 
 def exit(func):
@@ -21,6 +21,8 @@ def main():
     )
     time.sleep(1)
     while True:
+        print("[green][bold]your list[/bold][/green]")
+        showmain()
         a = menu()
         time.sleep(1)
         console.clear()
